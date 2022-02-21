@@ -36,5 +36,4 @@ Il motore è collegato ad un DRIVER(*DRV8833*), i cui pin di ingresso sono colle
 
 ## COLLAUDO
 ##### La task che regola la velocità del motore deve essere sempre in funzione.
-Nell' ultima versione del progetto ho fatto in modo che quando alimentiamo il rullo il motore non si attiva, lo attiviamo quando necessario schiacciando il pulsante di sinistra.
-
+Nell' ultima versione del progetto ho fatto in modo che, quando alimentiamo il rullo, il motore non si attiva, lo attiviamo quando necessario schiacciando il pulsante di sinistra.
