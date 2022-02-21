@@ -1,5 +1,5 @@
 # PROGETTO FEDERICO CRIPPA 712
-![immagine drv8833](https://github.com/FC712/CODICE-MOTORE/blob/main/RULLO.PNG)
+![immagine drv8833](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/IMMAGINI/DRIVER.PNG)
 ## SPIEGAZIONE HARDWARE
 #### MOTORE IN CORRENTE CONTINUA
 Un motore in corrente continua (CC) è un tipo di macchina elettrica che converte l’energia elettrica in energia meccanica. Assorbe energia elettrica attraverso la corrente continua e la converte in rotazione meccanica.
@@ -15,7 +15,7 @@ La coppia generata è proporzionale alla corrente ed il controllo più semplice 
 
 ### DRIVER PILOTAGGIO MOTORE DRV8833
 
-![immagine drv8833](https://github.com/FC712/CODICE-MOTORE/blob/main/DRIVER.PNG)
+![immagine drv8833](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/IMMAGINI/DRIVER.PNG)
 
 Dual-H-Bridge Current-Control Motor Driver 
 - Can Drive Two DC Motors or One Stepper Motor
