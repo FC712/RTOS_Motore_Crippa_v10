@@ -1,11 +1,11 @@
 # PROGETTO FEDERICO CRIPPA 712
-![immagine drv8833](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/IMMAGINI/DRIVER.PNG)
+![immagine drv8833](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/IMMAGINI/RULLO.PNG)
 ## SPIEGAZIONE HARDWARE
 #### MOTORE IN CORRENTE CONTINUA
 Un motore in corrente continua (CC) è un tipo di macchina elettrica che converte l’energia elettrica in energia meccanica. Assorbe energia elettrica attraverso la corrente continua e la converte in rotazione meccanica.
 Nei motori CC parte che gira è detta rotore o armatura mentre la parte che genera il campo magnetico fisso (nell'esempio i due magneti colorati) detta statore. Un interruttore rotante detto commutatore o collettore a spazzole inverte due volte ad ogni giro la direzione della corrente elettrica che percorre i due avvolgimenti generando un campo magnetico che entra ed esce dalle parti arrotondate dell'armatura. Nascono forze di attrazione e repulsione con i magneti permanenti fissi (indicati con N ed S nelle figure).
 
-![immagine drv8833](https://github.com/FC712/CODICE-MOTORE/blob/main/MOTORE.PNG)
+![immagine drv8833](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/MOTORE.PNG)
 
 La velocità di rotazione dipende da: 
 - Tensione applicata. 
@@ -23,7 +23,7 @@ Dual-H-Bridge Current-Control Motor Driver
 - Power Supply Voltage Range 2.7 to 10.8V
 
 ### SCHEMA DI MONTAGGIO DEL DRIVER MOTORE
-![schema elettrico driver motore](https://github.com/FC712/CODICE-MOTORE/blob/main/schematic.PNG) 
+![schema elettrico driver motore](https://github.com/FC712/RTOS_Motore_Crippa_v10/blob/main/schematic.PNG) 
 
 ## DESCRIZIONE CODICE
 
