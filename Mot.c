@@ -30,7 +30,7 @@ void motInit(void){
   GPIOE->AFR[1] |= GPIO_AFRH_AFSEL11_0;	
 
 	TIM1_CH2_Init(MOT_VN);
-	
+//Creazione delle task necessarie
 	xTaskCreate(vTask_Motore, /* Pointer to the function that implements the task.              */
 		"Task 1 (Motore)",    /* Text name for the task.  This is to facilitate debugging only. */
 		50,   /* Stack depth in words.                */
@@ -39,12 +39,6 @@ void motInit(void){
 		NULL); /* We are not using the task handle.    */
 	xTaskCreate(vTaskMotPA1, /* Pointer to the function that implements the task.              */
 		"Task 1 (vTaskMotPA1)",    /* Text name for the task.  This is to facilitate debugging only. */
-		50,   /* Stack depth in words.                */
-		NULL,  /* We are not using the task parameter. */
-		1,     /* This task will run at priority 1.    */
-		NULL); /* We are not using the task handle.    */
-	xTaskCreate(vTaskMotPA2, /* Pointer to the function that implements the task.              */
-		"Task 1 (vTaskMotPA2)",    /* Text name for the task.  This is to facilitate debugging only. */
 		50,   /* Stack depth in words.                */
 		NULL,  /* We are not using the task parameter. */
 		1,     /* This task will run at priority 1.    */
@@ -75,6 +69,7 @@ void motStart(void){
 	RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
 }
 
+//Attende la pressione del pulsante di sinistra(PA1), quando premuto parte il motore
 void vTask_Motore(void * pvParameters){
 	const EventBits_t xBitsToWaitForStart = EV_MOT_START;
 	while(1){
@@ -90,14 +85,6 @@ void vTaskMotPA1(void * pvParameters){
 			xEventGroupSetBits(xEventGroup,EV_MOT_START);	
 	}	
 }
-void vTaskMotPA2(void * pvParameters){
-	while(1){
-		while(!digitalRead(PA0));
-		while(digitalRead(PA0)){;}
-			xEventGroupSetBits(xEventGroup,EV_MOT_STOP);
-	}	
-}
-
 
 //attivazione timer 1 canale 2
 void TIM1_CH2_Init(int motTon){
@@ -121,7 +108,7 @@ void TIM1_CH2_Init(int motTon){
  //	TIM1->CCMR1 &= ~TIM_CCMR1_OC1PE;
 	TIM1->CCMR1 |= TIM_CCMR1_OC2PE;
 	
-	//Selezione polarità: 0 Attivo alto; 1 attivo basso
+	//Selezione polaritÃ : 0 Attivo alto; 1 attivo basso
 	TIM1->CCER &= ~TIM_CCER_CC2P;
 	
 	//Abilitazione canale 1 complementare
